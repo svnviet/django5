@@ -5,13 +5,13 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_DB: timetk
+      POSTGRES_DB: db_name
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/db_name/data
 
 volumes:
   pgdata:
